@@ -1,4 +1,8 @@
 language: java
 sudo: required
 before_install:
+ - wget http://services.gradle.org/distributions/gradle-2.11-bin.zip
  - chmod +x gradlew
+ - unzip gradle-2.11-bin.zip
+ - export GRADLE_HOME=$PWD/gradle-2.11
+ - export PATH=$GRADLE_HOME/bin:$PATH
